@@ -6,7 +6,7 @@ branches:
   - hexo
 before_install:
 - openssl aes-256-cbc -K $encrypted_7286f759eb6e_key -iv $encrypted_7286f759eb6e_iv
-  -in id_rsa_github.enc -out id_rsa_github -d
+  -in .travis/id_rsa_github.enc -out ~/.ssh/id_rsa_github -d
 - chmod 600 ~/.ssh/id_rsa_github 
 # 配置 ssh
 - eval $(ssh-agent)
