@@ -1,10 +1,20 @@
 language: node_js
 node_js:
-- "10"
+- '10'
 branches:
   only:
   - hexo
 before_install:
+- openssl aes-256-cbc -K $encrypted_7286f759eb6e_key -iv $encrypted_7286f759eb6e_iv
+  -in id_rsa_github.enc -out id_rsa_github -d
+- chmod 600 ~/.ssh/id_rsa_github 
+# 配置 ssh
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa_github
+- cp .travis/ssh_config ~/.ssh/config
+# 配置 git 替换为自己的信息
+- git config --global user.name 'gitchenhouse'
+- git config --global user.email b9903231@gapps.ntust.edu.tw
 - npm install -g hexo-cli
 install:
 - npm install
