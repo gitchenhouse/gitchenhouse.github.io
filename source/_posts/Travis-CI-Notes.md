@@ -20,7 +20,7 @@ tags:
 這樣格式的信息，這是travis用來解密id_rsa.enc的key，先保存起來，後面配置.travis.yml會用到它。
 
 為了讓git默認連接SSH還要創建一個ssh_config文件。在.travis文件夾下創建一個ssh_config文件，輸入以下內容：
-
+<!--more-->
 ```
 Host github.com
     User git
