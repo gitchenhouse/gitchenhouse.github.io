@@ -7,11 +7,11 @@ categories:
 - ASP.NET CORE
 ---
 
-# ASP.NET Core . 如何在後臺運行一個任務
-<!--more-->
+# ASP.NET Core.如何在後臺運行一個任務
 在大部分程序中一般都會需要用到後臺任務， 比如定時更新緩存或更新某些狀態.
 
 以調用微信公眾號的Api為例， 經常會用到access_token，官方文檔這樣描述：“是公眾號的全局唯一接口調用憑據，有效期目前為2個小時，需定時刷新，重復獲取將導致上次獲取的access_token失效，建議公眾號開發者使用中控服務器統一獲取和刷新Access_token，其他業務邏輯服務器所使用的access_token均來自於該中控服務器，不應該各自去刷新，否則容易造成沖突，導致access_token覆蓋而影響業務。
+<!--more-->
 
 Microsoft示例提供了有關此常見使用模式的幾個示例IHostedService。
 
