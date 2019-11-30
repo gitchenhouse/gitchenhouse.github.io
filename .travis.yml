@@ -20,5 +20,7 @@ script:
 - hexo clean
 - hexo generate
 after_success:
+- git config --global user.name "gitchenhouse" 
+- git config --global user.name "b9903231@gapps.ntust.edu.tw" 
 - sed -i'' "/^ *repo/s~github\.com~${git_token}@github.com~" _config.yml
 - hexo deploy
